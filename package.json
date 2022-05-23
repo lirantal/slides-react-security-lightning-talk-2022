@@ -1,0 +1,15 @@
+{
+  "name": "let-me-show-you-how-react-applications-get-hacked-in-the-real-world",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.31.2",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "slidev-theme-purplin": "^1.1.0"
+  }
+}
