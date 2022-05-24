@@ -17,17 +17,7 @@ theme: purplin
   </span>
 </div>
 
-<BarBottom title="Hack in Paris 2022">
-  <Item text="lirantal">
-    <carbon:logo-github />
-  </Item>
-  <Item text="liran_tal">
-    <carbon:logo-twitter />
-  </Item>
-  <!-- <Item text="sli.dev">
-    <carbon:link />
-  </Item> -->
-</BarBottom>
+<SlidesBarBottom/>
 
 ---
 layout: intro
