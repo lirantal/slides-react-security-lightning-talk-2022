@@ -17,7 +17,6 @@ theme: purplin
   </span>
 </div>
 
-<SlidesBarBottom/>
 
 ---
 layout: intro
