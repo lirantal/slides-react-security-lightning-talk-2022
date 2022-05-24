@@ -4,7 +4,9 @@ theme: purplin
 
 # How React Applications Get Hacked in the Real World
 
-Liran Tal
+--
+
+## Liran Tal
 
 ****
 <div class="pt-12">
