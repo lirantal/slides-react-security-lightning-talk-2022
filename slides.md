@@ -17,6 +17,25 @@ theme: purplin
   </span>
 </div>
 
+---
+layout: image-x
+image: 'https://github.com/lirantal.png'
+imageOrder: 2
+---
+
+<style>
+img {
+  height: 22px;
+  width: 50%;
+  border-radius: 80%;
+}
+</style>
+
+# Liran Tal
+
+- 🤓 JavaScript and Node.js developer
+- 🥑 Developer Advocate at Snyk.io
+- 🔨 Building security education and tools for JavaScript developers
 
 ---
 layout: intro
@@ -141,29 +160,7 @@ layout: intro
   </Item>
 </BarBottom>
 
----
-layout: image-x
-image: 'https://user-images.githubusercontent.com/13499566/138951075-018e65d5-b5fe-4200-9ea7-34315b1764da.jpg'
-imageOrder: 1
----
 
-# layout: image-x
-
-imageOrder: 1
-
-image 600x600
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
 
 ---
 layout: image-x
