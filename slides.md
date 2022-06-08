@@ -11,7 +11,7 @@ theme: purplin
 ****
 <div class="pt-12">
   <span @click="next">
-  More than just dangerouslySetInnerHTML() 
+  Security Best Practices in 7 minutes
   <br/>
   Let's get started <carbon:arrow-right class="inline"/>
   </span>
