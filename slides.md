@@ -38,6 +38,90 @@ img {
 - 🔨 Building security education and tools for JavaScript developers
 
 ---
+
+# How does React protect you from XSS ?
+
+The basics of Output Encoding
+
+## Safe encoding with HTML Entities
+
+Your code:
+
+```jsx
+const firstname = "liran<script>alert(1)</script>tal"
+return (
+  <span>{firstname}</span>
+)
+```
+
+---
+
+# How does React protect you from XSS ?
+
+The basics of Output Encoding
+
+## Safe encoding with HTML Entities
+
+Your code:
+
+```jsx {0}
+const firstname = "liran<script>alert(1)</script>tal"
+return (
+  <span>{firstname}</span>
+)
+```
+
+React outputs:
+
+> liran < script > alert(1) < /script > tal
+
+---
+
+# How does React protect you from XSS ?
+
+The basics of Output Encoding
+
+## Safe encoding with HTML Entities
+
+Your code:
+
+```jsx {0}
+const firstname = "liran<script>alert(1)</script>tal"
+return (
+  <span>{firstname}</span>
+)
+```
+
+React outputs:
+
+```html
+liran &lt; script &gt; alert(1) &lt; /script &gt; tal
+```
+
+---
+
+# How does React protect you from XSS ?
+
+The basics of Output Encoding
+
+## Safe encoding with HTML Entities
+
+Your code:
+
+```jsx {0}
+const firstname = "liran<script>alert(1)</script>tal"
+return (
+  <span>{firstname}</span>
+)
+```
+
+Browser prints:
+
+```html
+liran <script> alert(1) </script> tal
+```
+
+---
 layout: intro
 ---
 
