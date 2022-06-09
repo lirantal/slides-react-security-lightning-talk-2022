@@ -636,7 +636,31 @@ Upgrade react-json-pretty@2.0.0 to react-json-pretty@2.0.1 to fix
   - Encoding for JSON
 
 
+---
+layout: center
+class: "text-center"
+---
 
+# Learn More
+
+[React security best practices](https://snyk.io/blog/10-react-security-best-practices/)
+<br/>
+[Snyk Learn's Cross-site scripting lesson](https://learn.snyk.io/lessons/xss/javascript/)
+
+---
+layout: quote
+position: center
+---
+
+# Thank you!
+Stay secure!
+
+<br/>
+<br/>
+
+Liran Tal,
+<br/>
+Snyk
 
 
 
