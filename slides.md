@@ -146,7 +146,8 @@ layout: center
 layout: center
 ---
 
-# Discovering XSS vulnerabilities, part 1
+# Discovering XSS vulnerabilities,
+#### >> take 1
 
 ---
 layout: image-right
@@ -298,314 +299,358 @@ User input:
 - Avoid security controls in the form of denylists
 - Always prefix user input with a protocol scheme (e.g. `https://`) and work with relative paths
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
-layout: intro
+layout: center
 ---
 
-## `<BarBottom />` component
-
-<br />
-<br />
-
-<div class="grid grid-cols-2 gap-x-4">
-<div>
-This component displays a bar at the bottom of the slide. The component needs to be added to each slide where we want to display it.
-
-Receives a `title` prop that is the text displayed on the left.
-
-This component uses `slots` to add items on the right. Exist an `<Item />` component that receives a `text` prop and uses `slots` to add the icon/image.
-
-Exist a large [list of icon collections](https://icones.js.org/collection) available that you can use. These icons are imported automatically by _slidev_, you don't need to configure anything else to use them.
-
-</div>
-<div>
-
-### Slide example
-
-```markdown
----
-layout: intro
----
-
-# Content
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-```
-
-</div>
-</div>
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-
----
-layout: intro
----
-
-## `<BarBottom />` with custom icons/images
-
-<br />
-<br />
-
-<div class="grid grid-cols-2 gap-x-4">
-<div>
-
-You can use your own icons/images if you want.
-
-Only need to add an `<Item />` component and use `slots` features.
-
-Also, you can use [Windi CSS](https://windicss.org/) to add style to the icon, for example, adjust the width o height.
-
-</div>
-<div>
-
-### Slide example
-
-```markdown
----
-layout: intro
----
-
-# Content
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <img
-      src="https://d33wubrfki0l68.cloudfront.net/273aa82ec83b3e4357492a201fb68048af1c3e6a/8f657/logo.svg"
-      class="w-4"
-    />
-  </Item>
-</BarBottom>
-```
-
-</div>
-</div>
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <img
-      src="https://d33wubrfki0l68.cloudfront.net/273aa82ec83b3e4357492a201fb68048af1c3e6a/8f657/logo.svg"
-      class="w-4"
-    />
-  </Item>
-</BarBottom>
-
-
-
----
-layout: image-x
-image: 'https://user-images.githubusercontent.com/13499566/138950866-7d2addb2-fe3f-41f5-aab6-d35688516612.jpg'
-imageOrder: 2
----
-
-# layout: image-x
-
-imageOrder: 2
-
-image 1080x1920
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-
----
-layout: quote
-position: center
----
-
-# "layout: quote"
-position: center
-
-'position' variants: left (default), center, right
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-  
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
+# Discovering other people's XSS vulnerabilities,
+#### >> take 2
 
 ---
 layout: image-right
-image: 'https://user-images.githubusercontent.com/13499566/138950614-52ec045b-aa93-4d52-91df-b782cc9c7143.jpg'
+image: './assets/hack2-xss-0.png'
 ---
 
-# Code
-
-Use code snippets and get the highlighting directly!
-
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
 }
+</style> 
 
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
+# Printing a pretty JSON in 3 easy steps
+
+Steps:
+
+- Install: `npm install --save react-json-pretty --ignore-scripts`
+
+- Import: `import JSONPretty from 'react-json-pretty'`
+
+- Use: 
+```js
+export default function PackageParser(props) {
+ return (
+    <JSONPretty
+      space="4"
+      data={props.packageManifest}
+    />
+ )
 }
 ```
 
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
-
 ---
-layout: center
-class: "text-center"
+layout: image-right
+image: './assets/hack2-xss-0.png'
 ---
 
-# Learn More
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
 
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+# Printing a pretty JSON in 3 easy steps
 
-<BarBottom  title="Slidev theme purplin">
-  <Item text="slidevjs/slidev">
-    <carbon:logo-github />
-  </Item>
-  <Item text="Slidevjs">
-    <carbon:logo-twitter />
-  </Item>
-  <Item text="sli.dev">
-    <carbon:link />
-  </Item>
-</BarBottom>
+<br/>
+<br/>
+
+**Is it XSS-free?**
+
+> Hint: who says a package manifest needs to be... <br/>
+> an object?
+
+---
+layout: image-right
+image: './assets/hack2-xss-1.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+<br/>
+<br/>
+
+**Is it XSS-free?**
+
+```json
+{
+  "packageManifest":
+    "<img src=x onError=alert(1) />"
+}
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-1.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+```jsx {all|5|14-16}
+return (
+  <div {...rest} dangerouslySetInnerHTML={
+    {__html:
+      `<pre class=${themeClassName}${getStyle('main', theme)}>${
+        this._pretty.call(this, theme, obj, replacer, +space)
+      }</pre>`
+    }
+  }>
+  </div>
+);
+
+  private _pretty(theme: ITheme, obj: any, replacer: () => {}, space: number) {
+    ...
+    return text.replace(/&/g, '&amp;').replace(/\\"([^,])/g, '\\&quot;$1')
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(regLine, this._replace.bind(null, theme));
+  }
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-1.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+```jsx {all|4|10-14}
+if (typeof obj === 'string') {
+  try {
+    obj = JSON.parse(obj);
+  } catch (e) {
+    if (!silent) {
+      console.warn(`[react-json-pretty]: ${e.message}`);
+    }
+
+    return(
+      <div {...rest} dangerouslySetInnerHTML={
+        {__html:
+          `<pre class=${themeClassName}
+          ${getStyle('main', theme)}>${obj}</pre>`
+        }
+      }>
+      </div>
+    );
+  }
+}
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-2.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+```js {all|2-6}
+const xssmap = {
+  '"': '&quot;',
+  '\'': '&apos;',
+  '&': '&amp;',
+  '>': '&gt;',
+  '<': '&lt',
+};
+
+function xss(s) {
+  if (!s) {
+    return s;
+  }
+
+  return s.replace(/<|>|&|"|'/g, (m) => {
+    return xssmap[m];
+  });
+}
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-3.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Escaping XSS in my own components
+
+```jsx {all|1-3|6,9}
+function xss(s) {
+  ...
+}
+
+<Row className="justify-content">
+  <div dangerouslySetInnerHTML={
+    {__html: `
+    <img src=${authorScreenshotURL}
+    alt=${xss(authorScreenshotDescription)} />
+    `
+    }
+  } />
+</Row>
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-3.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Escaping XSS in my own components
+
+<br/>
+
+User input:
+
+```json
+{ "authorScreenshotDescription": 
+  "<img src=x onError=alert(1) />" }
+```
+
+Your react code:
+
+```jsx {4}
+  <div dangerouslySetInnerHTML={
+    {__html: `
+    <img src=${authorScreenshotURL}
+    alt=${xss(authorScreenshotDescription)} />
+    `
+    }
+  } />
+```
+
+---
+layout: image-right
+image: './assets/hack2-xss-4.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Escaping XSS in my own components
+
+<br/>
+
+User input:
+
+```json
+{ "authorScreenshotDescription":
+  "<img src=x onError=alert(1) />" }
+```
+
+Your react code:
+
+```jsx {4}
+  <div dangerouslySetInnerHTML={
+    {__html: `
+    <img src=${authorScreenshotURL}
+    alt=${xss(authorScreenshotDescription)} />
+    `
+    }
+  } />
+```
+
+---
+
+# dangerouslySetInnerHTML pitfalls
+
+```jsx
+  alt=${xss(authorScreenshotDescription)} />
+```
+
+<br/>
+
+## Best Practices for handling:
+<br/>
+
+- Your dependencies might incorrectly use `dangerouslySetInnerHTML`
+
+```java
+$ snyk test
+
+Upgrade react-json-pretty@2.0.0 to react-json-pretty@2.0.1 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity]
+    introduced by react-json-pretty@2.0.0
+
+```
+
+---
+
+# dangerouslySetInnerHTML pitfalls
+
+```jsx
+  alt=${xss(authorScreenshotDescription)} />
+```
+
+<br/>
+
+## Best Practices for handling:
+
+<br/>
+
+- Output encoding is case sensitive
+- All of these require different handling
+  - Encoding for HTML elements
+  - Encoding for HTML attributes
+  - Encoding for CSS
+  - Encoding for JSON
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
