@@ -660,20 +660,3 @@ Stay secure!
 Liran Tal,
 <br/>
 Snyk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
