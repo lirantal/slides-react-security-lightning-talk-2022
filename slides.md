@@ -122,6 +122,209 @@ liran <script> alert(1) </script> tal
 ```
 
 ---
+layout: center
+---
+
+# React is 'secure by default' 
+
+**means**
+
+# React does output encoding
+
+---
+layout: center
+---
+
+# React is 'secure by default'
+
+**means**
+
+# React performs output encoding
+# **sometimes** 🤷‍♂️
+
+---
+layout: center
+---
+
+# Discovering XSS vulnerabilities, part 1
+
+---
+layout: image-right
+image: './assets/hack1-xss-0.png'
+---
+
+# Links in React apps
+<br/>
+
+As a user,
+
+I want to be able to provide my Twitter profile
+
+So that other users can follow me
+
+---
+layout: image-right
+image: './assets/hack1-xss-0.png'
+---
+
+# Links in React apps
+User input:
+
+```json
+{"twitterLink": "https://twitter.com/katelibby"}
+```
+
+<br/>
+Your react code:
+
+```jsx {all|5}
+<div className="btn-wrapper profile pt-3">
+  <Button
+    className="btn-icon btn-round"
+    color="twitter"
+    href={twitterLink}
+    id="tooltip639225725"
+  >
+    <i className="fab fa-twitter" />
+  </Button>
+  <UncontrolledTooltip delay={0}>
+    Follow me
+  </UncontrolledTooltip>
+</div>
+```
+
+---
+layout: image-right
+image: './assets/hack1-xss-1.png'
+---
+
+# Links in React apps
+
+User input:
+
+```json
+{"twitterLink": "javascript:alert(1)"}
+```
+
+---
+layout: image-right
+image: './assets/hack1-xss-0.png'
+---
+
+# Links in React apps
+
+User input:
+
+```json
+{"twitterLink": "javascript:alert(1)"}
+```
+
+Attempting a fix (1):
+
+```jsx
+if (twitterLink
+  .indexOf('javascript:', 0) === 0) {
+  setTwitterLink('#');
+}
+```
+
+---
+layout: image-right
+image: './assets/hack1-xss-1.png'
+---
+
+# Links in React apps
+
+User input:
+
+```json
+{"twitterLink": "JAVAscript:alert(1)"}
+```
+
+> new user input is uppercase `JAVAscript` vs prior lowercase `javascript`
+
+---
+layout: image-right
+image: './assets/hack1-xss-0.png'
+---
+
+# Links in React apps
+
+User input:
+
+```json
+{"twitterLink": "javascript:alert(1)"}
+```
+
+Attempting a fix (2):
+
+```jsx {2}
+if (twitterLink
+  .toLowerCase()
+  .indexOf('javascript:', 0) === 0) {
+  setTwitterLink('#');
+}
+```
+
+---
+layout: image-right
+image: './assets/hack1-xss-1.png'
+---
+
+# Links in React apps
+
+User input:
+
+```json
+{"twitterLink": "\x19JAVAscript:alert(1)"}
+```
+
+> new user input includes control character \x19
+
+---
+
+# Links in React apps
+
+```json
+{"twitterLink": "\x19JAVAscript:alert(1)"}
+```
+
+<br/>
+
+## Best Practices for handling user input:
+<br/>
+
+- React doesn't escape or sanitize user input that flows into the `href` attribute of HTML Anchor elements
+- Avoid security controls in the form of denylists
+- Always prefix user input with a protocol scheme (e.g. `https://`) and work with relative paths
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 layout: intro
 ---
 
