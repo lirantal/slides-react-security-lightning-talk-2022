@@ -7,13 +7,12 @@ theme: purplin
 --
 
 ## Liran Tal
+React Summit 2022 🇳🇱
 
 ****
 <div class="pt-12">
   <span @click="next">
   Security Best Practices in 7 minutes
-  <br/>
-  Let's get started <carbon:arrow-right class="inline"/>
   </span>
 </div>
 

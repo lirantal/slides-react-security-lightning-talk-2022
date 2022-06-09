@@ -1,6 +1,6 @@
 <template>
     <!-- <BarBottom> component is provided by the purplin theme -->
-    <BarBottom title="React Summit 2022 🇳🇱">
+    <BarBottom title="Snyk">
     <Item text="lirantal">
         <carbon:logo-github />
     </Item>
