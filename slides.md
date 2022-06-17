@@ -323,6 +323,44 @@ Steps:
 
 - Install: `npm install --save react-json-pretty --ignore-scripts`
 
+---
+layout: image-right
+image: './assets/hack2-xss-0.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+Steps:
+
+- Install: `npm install --save react-json-pretty --ignore-scripts`
+
+- Import: `import JSONPretty from 'react-json-pretty'`
+
+---
+layout: image-right
+image: './assets/hack2-xss-0.png'
+---
+
+<style>
+div.w-full {
+  background-position: right !important;
+  background-size: contain !important;
+}
+</style> 
+
+# Printing a pretty JSON in 3 easy steps
+
+Steps:
+
+- Install: `npm install --save react-json-pretty --ignore-scripts`
+
 - Import: `import JSONPretty from 'react-json-pretty'`
 
 - Use: 
@@ -652,11 +690,18 @@ position: center
 ---
 
 # Thank you!
-Stay secure!
+p.s. don't forget to scan your React code<br/>
+and your npm dependencies ;-)
+
+```bash
+$ npm install -g snyk
+$ snyk test
+$ # have fun writing secure code
+```
 
 <br/>
 <br/>
 
 Liran Tal,
 <br/>
-Snyk
+Snyk.io
